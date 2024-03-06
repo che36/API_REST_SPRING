@@ -22,6 +22,6 @@ public class ProdutoController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void inserir(@RequestBody Produto produto) {
-
+        produtoService.inserir(produto);
     }
 }
