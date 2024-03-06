@@ -17,4 +17,8 @@ public class ProdutoService {
         listaProduto.add(p2);
         return listaProduto;
     }
+
+    public void inserir(Produto produto) {
+        System.out.println("Inserido: " + produto);
+    }
 }
