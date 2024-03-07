@@ -24,4 +24,17 @@ public class ProdutoController {
     public void inserir(@RequestBody Produto produto) {
         produtoService.inserir(produto);
     }
+
+    @PutMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void alterar(@RequestBody Produto produto) {
+        produtoService.alterar(produto);
+    }
+
+    @DeleteMapping
+    @RequestMapping("{id}")
+    public void excluir(@PathVariable Long id) {
+        produtoService.excluir(id);
+    }
+
 }
